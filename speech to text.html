@@ -6,7 +6,7 @@
 <head>
   <title>Live Update</title>
     <meta charset="UTF-8">
-    
+    <meta charset="utf-8">
 </head>
 <style type="text/css">
   body{ 
@@ -34,6 +34,7 @@
     var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     var recognition = new SpeechRecognition();
     speak.addEventListener('click', function () {
+        recognition.lang='ar-AE';
         recognition.start();
 
         textarea.innerHTML = '...speaking';
